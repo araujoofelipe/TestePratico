@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Gerenciamento de quartos e hoteis</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/yagomarialva?tab=repositories">Works</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/public-profile/in/yago-marialva-550737103">About</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <div id="banner">
+
+            <h1>Hotéis e quartos<small>Sistema de Cadastro</small></h1>
+
+        </div>
+        <div id="lastest-projects" class="container">
+
+            <div class="row text-center">
+                <h2>Manter Hotéis</h2>
+                <hr>
+            </div>
+
+            <div class="form-group">
+                            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                                <div class="col-md-12">
+                                <div>
+                                    <label>Nome</label><label class="validation-error hide" id="NomeValidationError"></label>
+                                    <input type="text" class="form-control" name="Nome" id="Nome" placeholder="Nome">
+                                </div>
+                                <div>
+                                    <label>Localização</label>
+                                    <input type="text" class="form-control" name="Localizacao" id="Localizacao" placeholder="Rua, Numero, Bairro">
+                                </div>
+                                <div>
+                                    <label>Sobre</label>
+                                    <input type="text" class="form-control" name="Sobre" id="Sobre" placeholder="Sobre">
+                                </div>
+                                <div>
+                                    <label>Comodidades</label>
+                                    <input type="text" class="form-control" name="Comodidades" id="Comodidades" placeholder="Piscina, Wi-fi, Café incluso, Estacionamento, etc...">
+                                </div>
+                                <div>
+                                    <label>Fotos</label>
+                                    <input type="file" class="form-control-file" name="Fotos" id="Fotos">
+                                </div>
+                                <p></p>
+                                <div id="button" class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                </div>
+                            </form></div>       
+            </div>
+
+            <table class="table table-striped" id="ListaHoteis">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Localização</th>
+                    <th scope="col">Sobre</th>
+                    <th scope="col">Comodidades</th>
+                    <th scope="col">Fotos</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+
+</div>
+
+
+            
+        </div>
+        <div class="container">
+
+            <div class="row text-center" id="lastest-projects">
+                <h2>Manter Quartos</h2>
+                <hr>
+            </div>
+
+            <div class="form-group">
+                            <form onsubmit="event.preventDefault();onFormSubmitQuartos();" autocomplete="off">
+                                <div class="col-md-12">
+                                <div>
+                                    <label>Nome</label></label>
+                                    <input type="text" class="form-control" name="Nome" id="Nome" placeholder="Nome">
+                                </div>
+                                <div>
+                                    <label>Descrição</label>
+                                    <input type="text" class="form-control" name="Descricao" id="Descricao" placeholder="Hotel, andar, etc">
+                                </div>
+                                <div>
+                                    <label>Preço</label>
+                                    <input type="text" class="form-control" name="Preco" id="Preco" placeholder="R$:0,00">
+                                </div>
+                                <div>
+                                    <label>Capacidade para hóspedes</label>
+                                    <input type="text" class="form-control" name="QtdHospedes" id="QtdHospedes" placeholder="4">
+                                </div>
+                                <div>
+                                    <label>Quantidade de camas</label>
+                                    <input type="text" class="form-control" name="QtdCamas" id="QtdCamas" placeholder="2">
+                                </div>
+                                <div>
+                                    <label>Fotos</label>
+                                    <input type="file" class="form-control-file" name="Fotos" id="Fotos">
+                                </div>
+                                <p></p>
+                                <div id="button" class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                </div>
+                            </form></div>       
+            </div>
+
+            <table class="table table-striped" id="ListaQuartos">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Capacidade de Hospedes</th>
+                    <th scope="col">Capacidade de Camas</th>
+                    <th scope="col">Fotos</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+
+            
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="row row-cinza-claro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4 col-popular-post">
+                                <h4>POPULAR POSTS</h4>
+                                <ul>
+                                    <li>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <time>July 24, 2020</time>
+                                    </li>
+                                    <li>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <time>July 24, 2020</time>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-links">
+                                <h4>LINKS</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="https://github.com/yagomarialva?tab=repositories"><i class="fa fa-angle-right"></i>Works</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/public-profile/in/yago-marialva-550737103"><i class="fa fa-angle-right"></i>About</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-get-in-touch">
+                                <h4>GET IN TOUCH</h4>
+                                <address>
+                                     <i class="fa fa-map-marker"> Manaus, Amazonas, BRASIL</i>
+                                 </address>
+                                <p>
+                                    <a href="tel: 559295353027"><i class="fa fa-phone"></i></a> +55 92 9535-3027</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cinza-escuro">
+            <div class="container">
+                <p class="pull-left">Copyright Yago Marialva Bentes 2020. All rights reserverd</p>
+                <p class="pull-right text-roxo">Created by Yago Marialva</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/scripts/scriptsQuarto.js"></script>
+    <script src="lib/scripts/scriptsHotel.js"></script>
+
+
+</body>
+
+</html>
